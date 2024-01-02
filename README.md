@@ -19,24 +19,46 @@ To write a program to perform selection sort and insertion sort using python pro
 5.	Repeat the steps 2 to 4 for sorting all the elements in the array.
 ## Program:
 i)	#Selection Sort
-```
+``` 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by:Kishore A
+RegisterNumber:212223110022
 
-
-
-
+def selection_sort(nums):
+    for i in range(len(nums)):
+        low=i
+        for j in range(i+1,len(nums)):
+            if nums[j] < nums[low]:
+                low=j
+        nums[i],nums[low]=nums[low],nums[i]
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 
 ```
 ii)	#Insertion Sort
-```
+``` 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by:Kishore A
+RegisterNumber:212223110022
 
-
-
-
-
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        item_to_insert=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>item_to_insert:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1]=item_to_insert
+list_of_nums=eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 
 ```
 
 ## Output:
+![Screenshot 2024-01-02 164320](https://github.com/Kishore23008675/Sorting-Algorithm/assets/144979375/0b926f6f-a556-40dc-b4ae-a824bce3337a)
+![Screenshot 2024-01-02 164337](https://github.com/Kishore23008675/Sorting-Algorithm/assets/144979375/69afef67-67be-4867-823e-13e70886910a)
 
 
 ## Result:
